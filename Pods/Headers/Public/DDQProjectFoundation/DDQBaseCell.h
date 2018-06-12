@@ -1,0 +1,1 @@
+../../../DDQProjectFoundation/DDQProjectFoundation/DDQUIFoundation/DDQBaseCell.h

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DDQParkingCarController">
+            <connections>
+                <outlet property="parking_contentTop" destination="b4Q-Tf-Qqv" id="R0U-1U-46S"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BAU-cv-rta">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="89"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i0t-Wf-PqT">
+                            <rect key="frame" x="15" y="44" width="360" height="1"/>
+                            <color key="backgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="Xpm-nC-e6j"/>
+                            </constraints>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SGh-tg-okj">
+                            <rect key="frame" x="15" y="0.0" width="360" height="44"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <state key="normal" title="收费停车">
+                                <color key="titleColor" red="0.32941176470588235" green="0.33725490196078434" blue="0.34901960784313724" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="parking_didSelectFee:" destination="-1" eventType="touchUpInside" id="DSr-qH-Yso"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="faz-bM-4gI">
+                            <rect key="frame" x="15" y="45" width="360" height="44"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <state key="normal" title="免费停车">
+                                <color key="titleColor" red="0.3294117647" green="0.33725490200000002" blue="0.34901960780000002" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="parking_didSelectFree:" destination="-1" eventType="touchUpInside" id="B8K-ja-4MJ"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="faz-bM-4gI" firstAttribute="leading" secondItem="i0t-Wf-PqT" secondAttribute="leading" id="1Vw-9x-779"/>
+                        <constraint firstItem="i0t-Wf-PqT" firstAttribute="leading" secondItem="BAU-cv-rta" secondAttribute="leading" constant="15" id="83O-dr-LLq"/>
+                        <constraint firstAttribute="bottom" secondItem="faz-bM-4gI" secondAttribute="bottom" id="BJw-Vg-WvR"/>
+                        <constraint firstItem="faz-bM-4gI" firstAttribute="top" secondItem="i0t-Wf-PqT" secondAttribute="bottom" id="JUE-YE-cgA"/>
+                        <constraint firstItem="i0t-Wf-PqT" firstAttribute="centerY" secondItem="BAU-cv-rta" secondAttribute="centerY" id="NWa-M2-hFb"/>
+                        <constraint firstItem="i0t-Wf-PqT" firstAttribute="top" secondItem="SGh-tg-okj" secondAttribute="bottom" id="PPy-VJ-9Js"/>
+                        <constraint firstAttribute="trailing" secondItem="faz-bM-4gI" secondAttribute="trailing" id="TWP-DU-bcw"/>
+                        <constraint firstAttribute="height" constant="89" id="dL2-Ia-XXk"/>
+                        <constraint firstAttribute="trailing" secondItem="SGh-tg-okj" secondAttribute="trailing" id="v7b-ub-heN"/>
+                        <constraint firstItem="SGh-tg-okj" firstAttribute="leading" secondItem="i0t-Wf-PqT" secondAttribute="leading" id="xBy-iu-L0E"/>
+                        <constraint firstAttribute="trailing" secondItem="i0t-Wf-PqT" secondAttribute="trailing" id="yod-vl-Cmo"/>
+                        <constraint firstItem="SGh-tg-okj" firstAttribute="top" secondItem="BAU-cv-rta" secondAttribute="top" id="zl2-oi-YDR"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="BAU-cv-rta" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="FtH-jZ-FL9"/>
+                <constraint firstItem="BAU-cv-rta" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="b4Q-Tf-Qqv"/>
+                <constraint firstAttribute="trailing" secondItem="BAU-cv-rta" secondAttribute="trailing" id="s1L-pd-8Pt"/>
+            </constraints>
+            <point key="canvasLocation" x="-632" y="139"/>
+        </view>
+    </objects>
+</document>

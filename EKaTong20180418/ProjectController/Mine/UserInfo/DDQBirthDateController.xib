@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DDQBirthDateController">
+            <connections>
+                <outlet property="birth_datePickerView" destination="Eyr-bd-HLL" id="EWd-UZ-ivY"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Eyr-bd-HLL">
+                    <rect key="frame" x="0.0" y="517" width="375" height="150"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="150" id="bbX-gb-XJm"/>
+                    </constraints>
+                    <date key="date" timeIntervalSinceReferenceDate="547813831.27268696">
+                        <!--2018-05-12 10:30:31 +0000-->
+                    </date>
+                </datePicker>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xBq-Cb-jQh">
+                    <rect key="frame" x="0.0" y="473" width="375" height="44"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IuW-RG-7MI">
+                            <rect key="frame" x="329" y="0.0" width="31" height="44"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <state key="normal" title="确定"/>
+                            <connections>
+                                <action selector="birth_didSelectSure" destination="-1" eventType="touchUpInside" id="NJ5-Io-HSX"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rLU-og-4gu">
+                            <rect key="frame" x="15" y="0.0" width="31" height="44"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <state key="normal" title="取消"/>
+                            <connections>
+                                <action selector="birth_didSelectCancel" destination="-1" eventType="touchUpInside" id="Ydx-6J-bHy"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.1058823529" green="0.53333333329999999" blue="0.93333333330000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="rLU-og-4gu" secondAttribute="bottom" id="5jq-XM-4Nx"/>
+                        <constraint firstAttribute="trailing" secondItem="IuW-RG-7MI" secondAttribute="trailing" constant="15" id="64e-N5-gOp"/>
+                        <constraint firstAttribute="height" constant="44" id="M4W-91-C6t"/>
+                        <constraint firstAttribute="bottom" secondItem="IuW-RG-7MI" secondAttribute="bottom" id="QnK-KM-lcc"/>
+                        <constraint firstItem="rLU-og-4gu" firstAttribute="top" secondItem="xBq-Cb-jQh" secondAttribute="top" id="Wgt-P2-oyH"/>
+                        <constraint firstItem="rLU-og-4gu" firstAttribute="centerY" secondItem="IuW-RG-7MI" secondAttribute="centerY" id="cWV-WR-gtS"/>
+                        <constraint firstItem="IuW-RG-7MI" firstAttribute="top" secondItem="xBq-Cb-jQh" secondAttribute="top" id="qkS-Vb-hNL"/>
+                        <constraint firstItem="IuW-RG-7MI" firstAttribute="centerY" secondItem="xBq-Cb-jQh" secondAttribute="centerY" id="vGf-A0-AU7"/>
+                        <constraint firstItem="rLU-og-4gu" firstAttribute="leading" secondItem="xBq-Cb-jQh" secondAttribute="leading" constant="15" id="yFm-wT-quI"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Eyr-bd-HLL" firstAttribute="top" secondItem="xBq-Cb-jQh" secondAttribute="bottom" id="6fa-1n-ruh"/>
+                <constraint firstAttribute="trailing" secondItem="Eyr-bd-HLL" secondAttribute="trailing" id="E5a-rt-H16"/>
+                <constraint firstAttribute="trailing" secondItem="xBq-Cb-jQh" secondAttribute="trailing" id="OF9-UA-F0U"/>
+                <constraint firstItem="Eyr-bd-HLL" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="aDz-Gx-HN2"/>
+                <constraint firstItem="xBq-Cb-jQh" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="j1l-Wj-ngc"/>
+                <constraint firstAttribute="bottom" secondItem="Eyr-bd-HLL" secondAttribute="bottom" id="rBJ-Xb-8kA"/>
+            </constraints>
+            <point key="canvasLocation" x="43" y="59"/>
+        </view>
+    </objects>
+</document>
